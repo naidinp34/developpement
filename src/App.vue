@@ -1,15 +1,19 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Bienvenue a nous tous!"/>
+  <HelloWorld msg="La Météo du Jour!"/>
+  <Ville selectedFruit/>
+  
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import Ville from './components/Villes.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    Ville
   }
 }
 </script>
@@ -20,7 +24,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #f03838;
+  color: #4cb80d;
   margin-top: 60px;
 }
 </style>
