@@ -1,19 +1,27 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
+  <h1>Prise en Main Vue3 - Projet :</h1>
   <HelloWorld msg="La Météo du Jour!"/>
-  <Ville selectedFruit/>
+  <donneesMeteo donneesMeteo />
+  <Ville selectedVille/>
+  
+  
+  
   
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import donneesMeteo from './components/Meteo.vue'
 import Ville from './components/Villes.vue'
 
 export default {
-  name: 'App',
+  
   components: {
     HelloWorld,
-    Ville
+    donneesMeteo,
+    Ville,
+    
   }
 }
 </script>

@@ -1,36 +1,40 @@
 <template>
-  <div class="filters">
-
-  <label for="basic-dropdown">Sellectionner une Ville: </label>
-  <select name="basic-dropdown" v-model="selectedVilles">
-    <option>Paris</option>
-    <option>Lyon</option>
-    <option>Marseille</option>
-    <option>Strasbourg</option>
-    <option>Montpellier</option>
-    <option>Perpignan</option>
-    <option>Rennes</option>
-  </select>
-
-    <div class="result">
-      Vous avez selectionné : <strong>{{ selectedVilles }}</strong>
+  <form>
+    <div id="v-model-select" class="demo">
+      <select v-model="selected">
+        <option disabled value="">Sellectionnez une ville</option>
+        <option>Paris</option>
+        <option>Lyon</option>
+        <option>Marseille</option>
+      </select>
+      <br>
+      <br>
+      <span>Vous avez sellectionné : {{ selected }}</span>
     </div>
-  </div>
+  </form>
 </template>
 
 <script>
+/* export default {
+  setup() {
+      return {
+        selected: "",
+      };
+  }
+}; */
+ 
 export default {
-  data () {
+data() {
     return {
-      selectedVilles: ''
-    }
+      selected: "",
+
+    };
   }
 }
 </script>
 
 <style scoped>
-
-.filters {
+.demo {
   width: 800px;
   margin: 0 auto;
 }
@@ -47,5 +51,4 @@ export default {
 label {
   display: block;
 }
-
 </style>
